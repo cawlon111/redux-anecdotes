@@ -10,23 +10,21 @@ const AnecdoteList = () => {
     anecdote.contenido.toLowerCase().includes(filter.toLowerCase())
   )
 
-  const handleVote = (id) => {
+  const manejarVoto = (id) => {
     dispatch(votarAnecdota(id))
   }
 
   return (
     <div>
-      {anecdotesFiltradas.map(anecdote =>
+      {anecdotesFiltradas.map(anecdote => (
         <div key={anecdote.id}>
-          <div>
-            {anecdote.contenido}
-          </div>
+          <div>{anecdote.contenido}</div>
           <div>
             tiene {anecdote.votos} votos
-            <button onClick={() => handleVote(anecdote.id)}>votar</button>
+            <button onClick={() => manejarVoto(anecdote.id)}>votar</button>
           </div>
         </div>
-      )}
+      ))}
     </div>
   )
 }
