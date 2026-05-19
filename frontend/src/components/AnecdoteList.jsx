@@ -13,6 +13,7 @@ const AnecdoteList = () => {
 
   const manejarVoto = (anecdota) => {
     dispatch(voteForAnecdote(anecdota))
+    // Usando el nuevo action creator con tiempo personalizado
     dispatch(showNotification(`Votaste por: "${anecdota.contenido}"`, 5))
   }
 

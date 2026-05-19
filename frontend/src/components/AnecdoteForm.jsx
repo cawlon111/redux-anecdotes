@@ -11,6 +11,7 @@ const AnecdoteForm = () => {
     if (contenido.trim() !== '') {
       event.target.anecdota.value = ''
       dispatch(createNewAnecdote(contenido))
+      // Usando el nuevo action creator con tiempo personalizado
       dispatch(showNotification(`Nueva anécdota creada: "${contenido}"`, 5))
     }
   }

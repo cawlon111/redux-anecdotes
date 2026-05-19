@@ -10,7 +10,8 @@ const Notification = () => {
     marginBottom: 10,
     backgroundColor: '#f0f0f0',
     borderRadius: 5,
-    color: '#333'
+    color: '#333',
+    transition: 'all 0.3s ease'
   }
 
   if (!notification) {

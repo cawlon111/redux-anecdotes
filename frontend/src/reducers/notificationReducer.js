@@ -15,10 +15,16 @@ const notificationSlice = createSlice({
 
 export const { setNotification, clearNotification } = notificationSlice.actions
 
+// Action creator mejorado con tiempo en segundos (6.19)
 export const showNotification = (message, timeInSeconds = 5) => {
-  return (dispatch) => {
+  return async (dispatch) => {
+    // Limpiar cualquier notificación anterior
+    dispatch(clearNotification())
+    
+    // Mostrar la nueva notificación
     dispatch(setNotification(message))
     
+    // Configurar temporizador para ocultarla
     setTimeout(() => {
       dispatch(clearNotification())
     }, timeInSeconds * 1000)
