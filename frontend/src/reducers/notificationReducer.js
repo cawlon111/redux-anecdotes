@@ -15,7 +15,6 @@ const notificationSlice = createSlice({
 
 export const { setNotification, clearNotification } = notificationSlice.actions
 
-// Action creator que muestra notificación por 5 segundos
 export const showNotification = (message, timeInSeconds = 5) => {
   return (dispatch) => {
     dispatch(setNotification(message))

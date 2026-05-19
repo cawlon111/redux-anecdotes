@@ -1,0 +1,14 @@
+{
+  "anecdotes": [
+    {
+      "id": 1,
+      "contenido": "Si duele, hazlo más seguido",
+      "votos": 10
+    },
+    {
+      "id": 2,
+      "contenido": "Agregar más programadores a un proyecto de software atrasado lo hace aún más tarde",
+      "votos": 4
+    }
+  ]
+}
